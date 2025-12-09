@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   max-width: 640px;
   margin: 0 auto;
+  margin-top: 100px;
   padding: 32px 20px 48px;
 
   @media (min-width: 768px) {
