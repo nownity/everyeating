@@ -212,7 +212,6 @@ const DetailMonth = styled.p`
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #7b8b7d;
-  margin-bottom: 6px;
 `;
 
 const DetailTitle = styled.h3`
@@ -224,20 +223,32 @@ const DetailTitle = styled.h3`
 `;
 
 const DetailDesc = styled.p`
-  font-size: 14px;
+  font-size: 17px;
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
   word-break: keep-all;
+  white-space: normal;
+
+  @media (max-width: 610px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 480px) {
+    white-space: pre-line;
+  }
 `;
 
 const DetailList = styled.ul`
   margin: 0;
   padding-left: 0;
   list-style: none;
-  font-size: 13px;
+  font-size: 16px;
   color: #555;
   line-height: 1.7;
+  @media (max-width: 610px) {
+    font-size: 13px;
+  }
 `;
 
 const DetailItem = styled.li`
@@ -251,14 +262,21 @@ const DetailItem = styled.li`
 `;
 
 const PriceNote = styled.p`
-  margin-top: 16px;
-  font-size: 12px;
+  margin-top: 50px;
+  font-size: 15px;
   color: #777;
   word-break: keep-all;
+  white-space: pre-line;
+
+  @media (max-width: 610px) {
+    white-space: normal;
+    font-size: 13px;
+    margin-top: 30px;
+  }
 `;
 
 const Highlight = styled.span`
-  color: #00bfa5;
+  color: #2f7c4a;
   font-weight: 600;
 `;
 
@@ -271,7 +289,7 @@ const steps = [
     shortSub: "식품안전 테스트",
     detailTitle: "레시피 고도화 & 식품안전 테스트",
     detailDesc:
-      "식감·내구성을 동시에 확보할 수 있는 레시피를 다각도로 실험하고, 식품위생 기준에 맞는 안전성 테스트를 반복적으로 진행합니다.",
+      "식감·내구성을 동시에 확보할 수 있는 레시피를 다각도로 실험하고, \n식품위생 기준에 맞는 안전성 테스트를 반복적으로 진행합니다.",
     bullets: [
       "원재료 조합 및 배합비 최적화",
       "알레르기·위생 이슈 후보군 사전 검토",
@@ -286,7 +304,7 @@ const steps = [
     shortSub: "내구성 검증",
     detailTitle: "프로토타입 제작 & 내구성 검증",
     detailDesc:
-      "실제 카페 운영 환경을 가정해 다양한 음료·잔 사이즈·사용 시간에 따른 내구성을 검증하고, 모양이 무너지지 않는 한계를 찾습니다.",
+      "실제 카페 운영 환경을 가정해 다양한 음료·잔 사이즈·사용 시간에 따른 \n내구성을 검증하고, 모양이 무너지지 않는 한계를 찾습니다.",
     bullets: [
       "온도(얼음/따뜻한 음료)별 내구성 실험",
       "사용 시간에 따른 형태 유지 테스트",
@@ -301,7 +319,7 @@ const steps = [
     shortSub: "샘플 공급",
     detailTitle: "소규모 생산라인 구축 & 샘플 공급",
     detailDesc:
-      "테스트를 통과한 레시피를 기준으로 소규모 생산 설비를 구축하고, 카페·행사 파트너에게 샘플을 공급해 실제 운영 환경 피드백을 수집합니다.",
+      "테스트를 통과한 레시피를 기준으로 소규모 생산 설비를 구축하고, \n카페·행사 파트너에게 샘플을 공급해 실제 운영 환경 피드백을 수집합니다.",
     bullets: [
       "공정별 생산 속도·불량률 모니터링",
       "카페/행사 파트너 대상 파일럿 공급",
@@ -316,7 +334,7 @@ const steps = [
     shortSub: "시장 런칭",
     detailTitle: "본격 생산 및 시장 런칭",
     detailDesc:
-      "품질과 생산성이 안정화되면 정규 라인에서 양산을 진행하고, 카페·프랜차이즈·행사 채널을 중심으로 단계적으로 시장에 론칭합니다.",
+      "품질과 생산성이 안정화되면 정규 라인에서 양산을 진행하고, \n카페·프랜차이즈·행사 채널을 중심으로 단계적으로 시장에 론칭합니다.",
     bullets: [
       "유통 구조·가격 정책 확정",
       "카페·프랜차이즈·행사 채널별 런칭 플랜",
@@ -381,10 +399,10 @@ const TechRoadmapSection = () => {
               </DetailList>
 
               <PriceNote>
-                <Highlight>가격 전략</Highlight> — 종이 빨대 대비{" "}
+                <Highlight>가격 전략</Highlight> &gt;&gt; 종이 빨대 대비{" "}
                 <strong>10~30% 높은 가격</strong>으로 시작해 프리미엄·친환경
-                이미지를 강조하고, 대량 생산 단계에서 점진적으로 단가를 낮추는
-                구조로 설계합니다.
+                이미지를 강조하고,{"\n"}
+                대량 생산 단계에서 점진적으로 단가를 낮추는 구조로 설계합니다.
               </PriceNote>
             </DetailInner>
           </DetailPanel>
