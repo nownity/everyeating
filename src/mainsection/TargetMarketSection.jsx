@@ -217,10 +217,7 @@ const TargetMarketSection = () => {
           </Card>
         </CardGrid>
 
-        <Note>
-          * 카피, 문구, 태그 내용은 전부 교체해도 되니까 지금은 구조와 톤만
-          봐두고, 나중에 실제 타깃에 맞게 편하게 수정하면 돼.
-        </Note>
+        <Note></Note>
       </SectionInner>
     </SectionWrapper>
   );
